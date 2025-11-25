@@ -6,9 +6,11 @@ function App() {
   return (
     <BrowserRouter>
       <Navbar />
+
       <Routes>
-        <Route></Route>45
+        <Route />
       </Routes>
+
       <Footer />
     </BrowserRouter>
   );
