@@ -2,7 +2,9 @@ import { Categories, mockData } from "../assets/mockData";
 import heroImage from "../assets/images/bg-hero.webp";
 import InfoSection from "../components/infoSection";
 import CategorySection from "../components/CategorySection";
-import { setProducts } from "../redux/cartSlice";
+// import { setProducts } from "../redux/cartSlice";
+import { setProducts } from "../redux/productSlice";
+
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import type { RootState } from "../redux/store";
@@ -51,7 +53,7 @@ const Home = () => {
         <h2>top products </h2>
         <div>
           {products.products.slice(0, 5).map((product) => (
-            <div>{product.name}</div>
+            <div key={product.id}>{product.name}</div>
           ))}
         </div>
       </div>
