@@ -5,8 +5,8 @@ interface Product {
   name: string;
   price: number;
   image: string;
-  quantity?: number;
-  totalPrice?: number;
+  quantity: number;
+  totalPrice: number;
 }
 interface CartState {
   products: Product[];
