@@ -19,11 +19,10 @@ function App() {
         <Route path="/shop" element={<Shop />} />
         <Route path="/cart" element={<Cart />} />
 
-        {/* Correct route */}
         <Route path="/checkout" element={<Checkout setOrder={setOrder} />} />
 
-        {/* Correct route */}
         <Route path="/order-confirmation" element={<Order order={order} />} />
+        <Route path="/filter-data" element={<FilterData />} />
       </Routes>
 
       <Footer />
