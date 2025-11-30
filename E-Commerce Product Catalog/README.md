@@ -1,73 +1,50 @@
-# React + TypeScript + Vite
+Major Learnings
+Key Technologies Covered
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Backend: Node.js, Express.js, REST APIs, Database management (SQL & NoSQL)
 
-Currently, two official plugins are available:
+Frontend: React, Next.js, TypeScript, Tailwind CSS
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Mobile & PWA: Progressive Web Apps, Mobile-first design
 
-## React Compiler
+API Integration: Consuming and creating APIs
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Other: GraphQL, System Design & Analysis
 
-## Expanding the ESLint configuration
+Frontend Development Concepts
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Next.js: Server-side rendering, routing, and static site generation
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Tailwind CSS: Utility-first CSS for rapid styling
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+TypeScript: Type safety, interfaces, and type annotations
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+GraphQL: Querying and mutating data efficiently
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+API Integration: Fetching and posting data using REST and GraphQL endpoints
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+System Design & Analysis: Designing scalable and maintainable software
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Challenges Faced and Solutions
+
+State Management: Implemented global state using Redux Toolkit
+
+Search & Filtering: Built a search functionality with live filtering
+
+Responsive Design: Ensured layouts work on multiple screen sizes using Tailwind CSS
+
+Type Safety Issues: Resolved TypeScript type errors by defining strict types and interfaces
+
+Best Practices & Takeaways
+
+Writing modular and maintainable code
+
+Using Git for proper version control and commits
+
+Creating reusable React components
+
+Handling errors gracefully on both frontend and backend
+
+Keeping documentation clear and concise
+
+Testing UI and business logic to prevent runtime errors
