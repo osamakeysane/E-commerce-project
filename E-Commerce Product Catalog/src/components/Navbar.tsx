@@ -9,7 +9,16 @@ import Login from "./Login";
 
 const Navbar = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isLogin, setisLogin] = useState(true);
+  const [isLogin, setIsLogin] = useState(true);
+  const openSignUp = () => {
+    setIsLogin(false);
+    setIsModalOpen(true);
+  };
+
+  const openLoginUp = () => {
+    setIsLogin(true);
+    setIsModalOpen(true);
+  };
 
   const products = useSelector((state: RootState) => state.cart.products);
   return (
@@ -63,7 +72,11 @@ const Navbar = () => {
         </Link>
       </div>
       <Modal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen}>
-        {isLogin ? <Login /> : <Register />}
+        {isLogin ? (
+          <Login openSignUp={openSignUp} />
+        ) : (
+          <Register openLoginUp={openLoginUp} />
+        )}
       </Modal>
     </nav>
   );

@@ -1,6 +1,8 @@
-import React from "react";
+type RegisterProps = {
+  openLoginUp: () => void;
+};
 
-const Register = () => {
+const Register = ({ openLoginUp }: RegisterProps) => {
   return (
     <div>
       <h2 className="text-2xl font-bold mb-4">Register</h2>
@@ -35,7 +37,9 @@ const Register = () => {
 
       <div className="text-center">
         <span className="text-gray-700">Already have an account? </span>
-        <button className="text-red-800">Login Up</button>
+        <button className="text-red-800" onClick={openLoginUp}>
+          Login Up
+        </button>
       </div>
     </div>
   );
